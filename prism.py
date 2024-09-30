@@ -317,3 +317,7 @@ class PrismRules:
         else:
             return self.bin_ranges
 
+# loading the dataset into a dataframe
+df = pd.read_csv('./DataSet/new_train_modified.csv')
+prism = PrismRules()
+_= prism.get_prism_rules(df,'Target')
